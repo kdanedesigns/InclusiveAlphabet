@@ -1,8 +1,8 @@
 <!-- omit in toc -->
-# IT115 Group Git Workflow
+# Inclusive Alphabet Group Git Workflow
 <!-- omit in toc -->
-## Team 1
-**John O'Hara, Karen Petersen, Alya Ahmed, Damion Gray**
+## Inclusive Alphabet Team
+** Alas Ali (Contributor) , Annelise Blanchard (Contributor), Donald Mains (Contributor), Karen Petersen (Repository Owner, Contributor) Kevin Bastien (Technical Mentor)**
 
 If you are just getting started, follow [these instructions](#setting-up-a-local-repository) to get a local repository on your machine.
 
