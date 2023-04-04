@@ -2,7 +2,7 @@
 # Inclusive Alphabet Group Git Workflow
 <!-- omit in toc -->
 ## Inclusive Alphabet Team
-** Alas Ali (Contributor) , Annelise Blanchard (Contributor), Donald Mains (Contributor), Karen Petersen (Repository Owner, Contributor) Kevin Bastien (Technical Mentor)**
+** Alas Ali (Contributor) , Annelise Blanchard (Contributor), Donald Mains (Contributor), Scott Hansford (Contributor), Karen Petersen (Repository Owner, Contributor) Kevin Bastien (Technical Mentor)**
 
 If you are just getting started, follow [these instructions](#setting-up-a-local-repository) to get a local repository on your machine.
 
