@@ -1,0 +1,24 @@
+{
+  "name": "inclusivealphabet",
+  "version": "1.0.0",
+  "description": "A website for Dyslexic people to create and use their own English Language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdanedesigns/InclusiveAlphabet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdanedesigns/InclusiveAlphabet/issues"
+  },
+  "homepage": "https://github.com/kdanedesigns/InclusiveAlphabet#readme",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "react-hook-form": "^7.43.9",
+    "react-router-dom": "^6.10.0"
+  }
+}
