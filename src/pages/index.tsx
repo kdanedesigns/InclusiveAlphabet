@@ -8,6 +8,8 @@ import LetterManipulator from '@/components/LetterManipulator';
 import CustomAlphabet from '@/components/CustomAlphabet';
 import AlphabetsList from '@/components/AlphabetsList';
 import AlphabetsContainer from '@/components/AlphabetsContainer';
+import Nav from '../components/Nav';
+
 
 // Main functional component of the application
 export default function Home() {
@@ -58,6 +60,7 @@ export default function Home() {
   return (
     <>
       {/* Set the page head, including title, meta tags, and favicon */}
+      <Nav></Nav>
       <Head>
         <title>DysKeys</title>
         <meta name="description" content="Image Rotation testing" />

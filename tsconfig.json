@@ -23,6 +23,6 @@
     "**/*.ts",
     "**/*.tsx",
     "src/pages/posts/first-post.js"
-  ],
+, "src/components/Login.tsx"  ],
   "exclude": ["node_modules"]
 }

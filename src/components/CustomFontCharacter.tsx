@@ -1,6 +1,5 @@
 // components/CustomFontCharacter.tsx
 import React from 'react';
-import fonts from '../styles/fonts.css';
 const CustomFontCharacter: React.FC = () => {
   const customFontStyle = {
     fontFamily: 'OpenDyslexic-Regular',
