@@ -8,6 +8,7 @@ import LetterManipulator from '@/components/LetterManipulator';
 import CustomAlphabet from '@/components/CustomAlphabet';
 import AlphabetsList from '@/components/AlphabetsList';
 import AlphabetsContainer from '@/components/AlphabetsContainer';
+import LogIn from '@/components/LogIn';
 
 // Main functional component of the application
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
 
   // Alphabet as a string
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
   // State for the chosen variations of the letters in the alphabet
   const [chosenVariations, setChosenVariations] = useState(
@@ -73,15 +74,11 @@ export default function Home() {
 
           {/* <CustomAlphabet variations={chosenVariations} /> */}
           {/* Render the LetterManipulator component for the current letter */}
-          <LetterManipulator
-            letter={alphabet[currentLetterIndex]}
-            chosenVariations={chosenVariations}
-            setChosenVariations={setChosenVariations}
-          />
-          <div style={buttonContainerStyle}>
+
+          {/* <div style={buttonContainerStyle}>
             <button
               style={{
-                backgroundColor: 'rgba(81,4,122,1)',
+                backgroundColor: 'rgba(0,240,120,1)',
                 borderRadius: '10px',
                 width: '60px',
                 boxShadow:
@@ -93,7 +90,40 @@ export default function Home() {
             </button>
             <button
               style={{
-                backgroundColor: 'rgba(81,4,122,1)',
+                backgroundColor: 'rgba(0,240,120,1)',
+                width: '60px',
+                borderRadius: '10px',
+                boxShadow:
+                  '0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)',
+              }}
+              onClick={handleNextLetter}
+            >
+              Next Letter
+            </button>
+          </div> */}
+
+
+          <LetterManipulator
+            letter={alphabet[currentLetterIndex]}
+            chosenVariations={chosenVariations}
+            setChosenVariations={setChosenVariations}
+          />
+          <div style={buttonContainerStyle}>
+            <button
+              style={{
+                backgroundColor: 'rgba(0,240,120,1)',
+                borderRadius: '10px',
+                width: '60px',
+                boxShadow:
+                  '0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)',
+              }}
+              onClick={handlePreviousLetter}
+            >
+              Previous Letter
+            </button>
+            <button
+              style={{
+                backgroundColor: 'rgba(0,240,120,1)',
                 width: '60px',
                 borderRadius: '10px',
                 boxShadow:

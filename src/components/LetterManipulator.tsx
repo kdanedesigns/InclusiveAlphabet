@@ -114,7 +114,7 @@ const LetterManipulator: React.FC<Props> = ({
         {/* Render Rotate, Flip, and Mirror buttons */}
         <button
           style={{
-            backgroundColor: 'rgba(105,10,230,1)',
+            backgroundColor: 'rgba(0,240,120,1)',
             borderRadius: '10px',
             padding: '5px',
           }}
@@ -124,7 +124,7 @@ const LetterManipulator: React.FC<Props> = ({
         </button>
         <button
           style={{
-            backgroundColor: 'rgba(105,10,230,1)',
+            backgroundColor: 'rgba(0,240,120,1)',
             borderRadius: '10px',
             padding: '5px',
           }}
@@ -134,7 +134,7 @@ const LetterManipulator: React.FC<Props> = ({
         </button>
         <button
           style={{
-            backgroundColor: 'rgba(105,10,230,1)',
+            backgroundColor: 'rgba(0,240,120,1)',
             borderRadius: '10px',
             padding: '5px',
           }}

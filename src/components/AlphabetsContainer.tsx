@@ -14,6 +14,7 @@ const AlphabetsContainer: React.FC = () => {
 
     // Log the fetched data to the console
     console.log('Fetched data:', data);
+    console.log(data)
 
     // Transform the data: convert objects to arrays
     const transformedAlphabets = data.alphabets.map((alphabet: any) => {

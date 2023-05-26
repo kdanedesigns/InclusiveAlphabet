@@ -8,7 +8,7 @@ A website for Dyslexic people to create and use their own English Language
 
 ## How to start the server:
 
-`npm run dev`
+npm run dev
 
 ## To create and connect to the database
 
