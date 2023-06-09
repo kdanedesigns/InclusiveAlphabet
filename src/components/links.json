@@ -2,11 +2,11 @@
     "links": [
         {
             "label": "Home",
-            "href": "/home"
+            "href": "/"
         },
         {
             "label": "Login",
-            "href": "../Components/Login.tsx" 
+            "href": "/login" 
         },
         {
             "label": "Account",
