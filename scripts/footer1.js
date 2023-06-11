@@ -1,0 +1,25 @@
+var myDate  = new Date();                               
+var CWEnd   = myDate.getFullYear();             
+var lgo1    ="KDaneDesigns Consulting - An eye for web design";
+var lgo2    ="www.KDaneDesigns.com";
+var CW      = "&copy"; 
+var CWBeg   = " 2020 -";
+var trColor   = "#afc8e0";
+var fontColor = "#F1F2FA";
+
+var footer  = "<table bgcolor=\"#afc8e0\" align=\"center\" width=\"100%\">";
+    footer += "<tr bgcolor=\"" + trColor + "\">";
+    footer += "<tr class = FooterContentLine1 font style=color:\"" + fontColor + "\">";
+    footer += "<td align=\"center\"> ";
+    footer += "<b>" + lgo1 + "</b></td>";
+    footer += "<td align=\"center\"> ";
+    footer += "<a href=\"DefaultWebDev.htm\" target=\"_blank\" class=\"FooterContentLine1\"> <IMG alt=\"\" src=\"Images/C-Lgo1.jpg\" HEIGHT=\"50\" WIDTH=\"300\" >" + "</a></td>";
+    footer += "<td align=\"center\"> ";
+    footer += "<b><a href=\"http://www.KDaneDesigns.com/index.html\" target=\"_blank\" class=\"FooterContentLine1\">" + lgo2 + "</a></b></td>";
+    footer += "<td align=\"center\">";
+    footer += "<b>" + CW + "</b></td>";
+    footer += "<td align=\"center\">";
+    footer += "<b>" + CWBeg + "</b></td>";
+    footer += "<td align=\"center\">";
+    footer += "<b>" + CWEnd + "</b></td>";    
+    footer += "</tr></table>";
