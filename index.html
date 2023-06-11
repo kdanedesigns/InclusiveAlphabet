@@ -1,0 +1,477 @@
+
+<HTML>
+<!-- ***************************** HEAD  *************************************************** -->
+<HEAD>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Keywords" content="font, glif, dyslexia, inclusive, dictionary, learning, dataset, examples, fontset, font-set, alphabet, inclusive, English, encyclopedia, word, reading, dyslexic, mirrored, reversed, backward, seeing, cognitive, understanding, translation, special needs">
+    <meta name="Description" content="Website for people with dyslexia to build their own font set, dictionary, and language.">
+	<META NAME="Robots" Content="ALL">
+	<META NAME="Rating" Content="General">
+	<META NAME="topic" CONTENT="Dyslexia">
+	<META NAME="subtopic" CONTENT="font">
+	<META NAME="Revisit" Content="31 days">
+	<META NAME="COPYRIGHT" CONTENT="Copyright; 2023 KDaneDesigns">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content=False name=vs_showGrid>
+	<INPUT TYPE=Hidden NAME="Dyslexic Tools" VALUE="font creation">
+
+	<TITLE>InclusiveAlphabet</TITLE>
+
+	<LINK href="Styles/kdsStyles.css" rel=Stylesheet></LINK>
+
+	<style>
+		/* Remove the navbar's default margin-bottom and rounded borders */
+		.navbar {
+			margin-bottom: 0;
+			border-radius: 0;
+		}
+	
+	</style>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+	<!-- Compiled and minified CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	<script>
+		if(top.location!=self.location){
+			top.location=self.location
+		}
+	</script>
+	<script language="JavaScript" src="Scripts/todate.js"></script>
+	<script language="JavaScript" src="Scripts/footer1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<!-- Compiled JavaScript for bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</HEAD>
+<!-- ***************************** HEAD  *************************************************** -->
+
+<!-- ***************************** Body  *************************************************** -->
+<body leftmargin="0" topmargin="0" bgcolor="#F1F2FA">
+<script src="Scripts/Menu.js"></script>
+
+<!-- ***************************************************************************** -->
+<!-- ********* TABLE 1 OPEN  - to set up for table columns *********************** -->
+<!-- ***************************************************************************** -->
+
+
+<TABLE class="container-fluid" height=1 cellSpacing=0 cellPadding=0 width="100%" border=0>
+	<TR vAlign=top>
+
+<!-- ********************************************************** -->
+<!-- ********* TABLE 2 Column 1 Side Menu - OPEN ************** -->
+<!-- ********************************************************** -->
+<!--		<TD style="width:25%" cellPadding=0 cellSpacing=0 border=0>  -->
+		<TD style="width:10%">
+
+			<!-- <TABLE class="container-fluid" id=Table2 cellSpacing=0 cellPadding=0 width="100%" border=0> -->
+			<TABLE class="container-fluid">
+				<TBODY>
+					<TR>
+						<!-- <TD>I'm Table 2 open </td> -->
+						<TD><br></TD>
+					<TD>&nbsp;</TD>
+					</TR>
+					<TR>
+					<TD>&nbsp;</TD>
+					</TR>	
+					<TR>
+						<!-- <TD onClick= "JavaScript:redirect(this.innerHTML, 'ilogin.html');"    -->
+						<TD onClick="document.getElementById('id01').style.display='block';"
+						onmouseover="JavaScript:this.className ='SideMenuMouseOver';" 
+						onmouseout="JavaScript:this.className ='SideMenuItem';" 
+						class=SideMenuItem width="100%" height=40>&nbsp;&nbsp;
+						Log In</TD>
+					</TR>	
+
+					<TR>
+					<TD>&nbsp;</TD>
+					</TR>	
+					<TR>
+						<!-- <TD onClick= "JavaScript:redirect(this.innerHTML, 'inewacct.html');"    -->
+						<!-- <button onclick="document.getElementById('id02').style.display='block'">Sign Up</button>-->
+						<TD onClick="document.getElementById('id02').style.display='block';"
+						onmouseover="JavaScript:this.className ='SideMenuMouseOver';" 
+						onmouseout="JavaScript:this.className ='SideMenuItem';" 
+						class=SideMenuItem width="100%" height=40>&nbsp;&nbsp;
+						Create Account</TD>
+					</TR>	
+					<TR>
+					<TD>&nbsp;</TD>
+					</TR>				
+					<TR>
+					<!-- <TD>I'm Table 2 Closed </td> -->
+					</TR>
+				<TBODY>
+			</TABLE>
+
+			<!-- Button to open the modal login form -->
+			<!--
+			<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+			-->
+
+			<!-- The Log In Modal -->
+			<div id="id01" class="modal">
+			  <span onclick="document.getElementById('id01').style.display='none'"
+			class="close" title="Close Modal">&times;</span>
+
+			  <!-- Modal Content -->
+			  <form class="modal-content animate" action="/action_page.php">
+				<div class="imgcontainer">
+				  <img src="Images/img_avatar2.png" alt="Inclusive Alphabet Sign In" class="avatar">
+				</div>
+
+				<div class="container">
+				  <label for="uname"><b>EmailAddress</b></label>
+				  <input type="text" placeholder="Enter Email Address" name="uname" required>
+
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required>
+					<span class="psw">Forgot <a href="#">password?</a></span>
+				  <button type="submit">Login</button>
+				  <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				  </label>
+
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+				  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		
+				</div>
+			  </form>
+			</div>
+			<script>
+			// Get the Log In modal
+			var modal = document.getElementById('id01');
+
+			// This is not working right not - have to click cancel to close modal or refresh screen - fix later
+			// When the user clicks anywhere outside of the Log In modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
+			<!-- *********** End Log In Modal ********************* -->			
+			
+			
+			<!-- The New Code Create Account Modal -->
+			<div id="id02" class="modal">
+			  <span onclick="document.getElementById('id02').style.display='none'"
+			class="close" title="Close Modal">&times;</span>
+
+			  <!-- Modal Content -->
+			  <form class="modal-content animate" action="/action_page.php">
+				<div class="imgcontainer">
+				  <img src="Images/img_avatar2.png" alt="Inclusive Alphabet Create Account" class="avatar">
+				</div>
+
+				<div class="container">
+				  <h1>Create a New Account</h1>
+				  <p>Please fill in this form and then click the Create Account button to create a new account.</p>
+				  <p> </p>
+				  <p> </p>
+				  <p> </p>
+				  <label for="uname"><b>Email your  Address</b></label>
+				  <input type="text" placeholder="Enter your Email Address" name="uname" required>
+				  <label for="psw"><b>Enter your Password</b></label>
+				  <input type="password" placeholder="Enter a strong Password" name="psw" required>
+				  <input type="password" placeholder="Re-Enter the Password" name="psw-repeat" required>
+				  <p> </p>
+				  <p> </p>
+				  <p> </p>
+				  <p> </p>
+				  <p> </p>
+				  
+				  <button type="submit">Create Account</button>
+				  <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				  </label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+								  <p> </p>
+				  <p> </p>
+				  <p> </p>
+				  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+				  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+				</div>
+			  </form>
+			</div>
+			<script>
+			// Get the Log In modal
+			var modal = document.getElementById('id02');
+
+			// This is not working right not - have to click cancel to close modal or refresh screen - fix later
+			// When the user clicks anywhere outside of the Log In modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
+			}
+			</script>
+			<!-- *********** End New Code - Create New Account Modal ********************* -->		
+			
+			
+			
+			
+			
+			<!-- ********************************************** -->			
+			<!-- ******** The Create New Account Modal ******** -->			
+			<!-- ********************************************** -->
+
+			<!-- Button to open the modal -->
+			<!-- <button onclick="document.getElementById('id02').style.display='block'">Sign Up</button>-->
+
+			<!-- The Modal (contains the Sign Up form) -->
+	<!--		<div id="id02" class="modal">
+			  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">times;</span>
+			  <form class="modal-content animate" action="/action_page.php">
+				<div class="container">
+				  <h1>Create a New Account</h1>
+				  <p>Please fill in this form to create an account.</p>
+				  <hr>
+				  <label for="email"><b>Email</b></label>
+				  <input type="text" placeholder="Enter Email" name="email" required>
+
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required>
+
+				  <label for="psw-repeat"><b>Repeat Password</b></label>
+				  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+				  <label>
+					<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+				  </label>
+
+				  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+				  <div class="clearfix">
+					<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+					<button type="submit" class="signup">Sign Up</button>
+				  </div>
+				</div>
+			  </form>
+			</div>
+
+			<script>
+			// Get the modal
+			var modal = document.getElementById('id02');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+			</script>
+-->
+			<!-- *********** End Create New Account Modal ********************* -->		
+
+			
+			
+			
+			
+		</TD>
+	<!-- ********************************************** -->
+	<!-- ********* TABLE 2 Column 1 closed ************ -->
+	<!-- ********************************************** -->
+
+
+	<!-- ********************************************** -->
+	<!-- ********* TABLE 3 Column 2 OPEN ********************* -->									
+	<!-- ********************************************** -->
+	<!--	<TD style="width:70%" cellPadding=0 cellSpacing=0 border=0>
+			<TABLE class="container-fluid" cellSpacing=0 cellPadding=0 width="100%" border=0>    -->
+		<TD style="width:90%">
+			<TABLE class="container-fluid">  			
+				<TBODY>
+					<TR>
+						<TD class="ContentTextTitle">WELCOME to the Inclusive Alphabet Project!</TD>
+						<TD>
+							<script language="JavaScript">
+							var myToday = "<div align=center><background-color: #afc8e0><h3>Today's Date: " + showDate + "</h3></div>";
+							document.write(myToday);
+							</script>
+						</TD>
+					</TR>
+										<TR>
+					<!-- <TD>I'm Table 3 open </td> -->
+						<TD class = "ContentNav" ><A href="index.html">&nbsp;Inclusive Alphabet</A> &gt; Landing Page</TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+						
+					</TR>		
+					<TR>
+						<TD class="ContentText">Team:</TD>
+						<TD></TD>
+					</TR>		
+					<TR>
+						<TD class="ContentText">Annelise Blanchard</TD>
+						<TD></TD>
+					</TR>		
+					<TR>
+						<TD class="ContentText">Donald Mains</TD>
+						<TD></TD>
+					</TR>		
+					<TR>
+						<TD class="ContentText">Karen Petersen</TD>
+						<TD></TD>
+					</TR>		
+					<TR>
+						<TD class="ContentText">Scott Hansford</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>	
+					<TR>
+						<TD class="ContentTextInstruction">Click Log In or Create Account to get started!</TD>
+					</TR>		
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>	
+					<TR>
+						<TD class="ContentTextTitle">ABOUT THIS PROJECT</TD>
+						<TD></TD>
+					</TR>	
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>	
+					<TR>
+						<TD class="ContentText">
+						  Note: ANS refers to Alpha, Numeric, and Special Characters
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">
+							Dyslexic people see ANS differently than most people. Our team project is to provide a way for people with dyslexia to create their own "language", and be able to translate it to and from the English language that is seen by people without dyslexia. The intent is to build one or more dyslexic databases of fonts and words that can be used in the future to help dyslexic users read and write in English on their own terms (include them as the individuals they are and how they see).
+						</TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							This repository will provide a website that allows a user to create a personalized font set of English ANS as the each user actually see's them, hence creating one or more new dyslexic ANS data sets, similar to creating a new language that can be translated to other languages.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Initially, the user will create a dataset (font set) of each ANS that will be mapped to the keyboard key id's. This will be done by selecting from pre-set options provided for each ANS. These options are created from a manually created ANS font set that displays each unique ANS in multiple ways that many dyslexic people may identify with from one of the options.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Once the user ANS font set has been completed the ANS font set will be reflected on the display as the user types. The user will be able to turn on/off an option to view the generally accepted view of an English ANS set under their font set so they can see the differences or similarities.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Another feature will include the ability to save words in their ANS font set, with optional definition for the word, and can link an image of the word, that can be saved database, creating their own dictionary/encyclopedia. Add, update and delete options will be provided for this database.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Stretch Goals:
+						</TD>
+						<TD></TD>
+					</TR>
+					
+					<TR>
+						<TD class="ContentText">	
+							Provide the ability to download a text file in the generally viewed English font set (like a book), and translate it for viewing in the users specific ANS font set.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Provide the ability to save a text file using the user's ANS font set.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Provide the ability to translate a file saved in the user's ANS font set to the generally accepted English font set.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Provide the ability to display a usable keyboard that displays with the user's specific font (tablet, touchscreen laptop, Android phone and/or IOS).
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD class="ContentText">	
+							Provide an option for the user to write their own interpretation of an ANS using a laptop touch screen or stylist on an Android phone.
+						</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD>&nbsp;</TD>
+						<TD></TD>
+					</TR>
+					<TR>
+						<TD align="center" class="ContentText"></TD>
+						<TD></TD>
+					<!-- <TD>I'm Table 3 closed </td> -->		   
+					</TR>
+				</TBODY>
+			</TABLE>
+	<!-- ********************************************** -->
+	<!-- ********* TABLE 3 Column 2 Closed ************ -->									
+	<!-- ********************************************** -->
+	
+
+			<!-- <TD>I'm Table 1 closed </td> -->
+			</TR>
+		</TABLE>
+<!-- ********************************************** -->
+<!-- ********* TABLE 1 closed *********************** -->
+<!-- ********************************************** -->
+
+<footer class="container-fluid">
+<script language="JavaScript">document.write(footer);</script>
+<br>		
+</footer>
+
+</body>
+<!-- ***************************** Body Closed *************************************************** -->
+
+</HTML>
