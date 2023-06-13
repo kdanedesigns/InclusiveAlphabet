@@ -10,6 +10,12 @@
 }
 
 .logo-container {
-    display: flex;
+    display: inline-block;
 }
 
+.vnavbar {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+    color: white
+  }

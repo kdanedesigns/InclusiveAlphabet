@@ -1,43 +1,57 @@
-// pages/login.tsx
 import React, { useState } from 'react';
+import AWS from 'aws-sdk';
 import Nav from '../components/Nav';
 
+
 const LoginPage: React.FC = () => {
+  // Create an instance of the AWS DynamoDB client
+  const dynamodbClient = new AWS.DynamoDB();
+
+  // State variables for the login form
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUsername(event.target.value);
-  };
-
-  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  // Function to handle form submission
+  const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
-    // Perform login logic here
+
+    try {
+      // Call the AWS SDK method to save the user to DynamoDB
+      await dynamodbClient.putItem({
+        TableName: 'for_users', // Replace with your DynamoDB table name
+        Item: {
+          username: { S: username },
+          password: { S: password },
+        },
+      }).promise();
+
+      console.log('User saved to DynamoDB');
+    } catch (error) {
+      console.error('Error saving user to DynamoDB:', error);
+    }
   };
 
   return (
-    <div>    
-    <Nav></Nav>
-      <h1>Login Page</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <input type="text" value={username} onChange={handleUsernameChange} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input type="password" value={password} onChange={handlePasswordChange} />
-        </label>
-        <br />
+    <div>
+      <Nav></Nav>
+      <h1>Login</h1>
+      <form onSubmit={handleLogin}>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+        />
         <button type="submit">Login</button>
-        <h2>New User?</h2>
-        <button type="submit">Create Account</button>
       </form>
+      <h1>New User?</h1>
+      <button type="submit">Create a New Account</button>
     </div>
   );
 };

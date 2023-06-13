@@ -10,26 +10,7 @@ import React from 'react';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div>
-      {/* <nav>
-        <ul>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/login">
-              <a>Login</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/account">
-              <a>Account</a>
-            </Link>
-          </li>
-        </ul>
-      </nav> */}
-    <Component {...pageProps} />
+      <Component {...pageProps} />
   </div>
   );
 }

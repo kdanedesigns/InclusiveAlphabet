@@ -59,8 +59,8 @@ export default function Home() {
 
   return (
     <>
-    <Nav></Nav>
       {/* Set the page head, including title, meta tags, and favicon */}
+      <Nav></Nav>
       <Head>
         <title>DysKeys</title>
         <meta name="description" content="Image Rotation testing" />
