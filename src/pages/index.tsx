@@ -1,15 +1,14 @@
 // Import necessary dependencies
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '@/styles/Home.module.css';
-import Link from 'next/link';
-import LetterManipulator from '@/components/LetterManipulator';
-import CustomAlphabet from '@/components/CustomAlphabet';
-import AlphabetsList from '@/components/AlphabetsList';
-import AlphabetsContainer from '@/components/AlphabetsContainer';
-import Nav from '../components/Nav';
-
+import React, { useState } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "@/styles/Home.module.css";
+import Link from "next/link";
+import LetterManipulator from "@/components/LetterManipulator";
+import CustomAlphabet from "@/components/CustomAlphabet";
+import AlphabetsList from "@/components/AlphabetsList";
+import AlphabetsContainer from "@/components/AlphabetsContainer";
+import Nav from "../components/Nav";
 
 // Main functional component of the application
 export default function Home() {
@@ -17,11 +16,11 @@ export default function Home() {
   const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
 
   // Alphabet as a string
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
   // State for the chosen variations of the letters in the alphabet
   const [chosenVariations, setChosenVariations] = useState(
-    alphabet.split('').reduce<{ [key: string]: any }>((acc, letter) => {
+    alphabet.split("").reduce<{ [key: string]: any }>((acc, letter) => {
       acc[letter] = { rotation: 0, flip: false, mirror: false };
       return acc;
     }, {})
@@ -45,16 +44,28 @@ export default function Home() {
     }
   };
 
+  // Handler function for going to  start of alphabet
+  const handleStart = () => {
+    setCurrentLetterIndex((prevIndex) => (prevIndex > 0 ? 0 : prevIndex));
+  };
+
+  // Handler function for going to end of alphabet
+  const handleEnd = () => {
+    setCurrentLetterIndex((prevIndex) =>
+      prevIndex >= 0 ? alphabet.length - 1 : prevIndex
+    );
+  };
+
   // CSS styling for the button container
   const buttonContainerStyle: React.CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     zIndex: 10,
-    position: 'relative',
-    padding: '40px',
-    width: '50px',
+    position: "relative",
+    padding: "40px",
+    width: "50px",
   };
 
   return (
@@ -84,11 +95,11 @@ export default function Home() {
           <div style={buttonContainerStyle}>
             <button
               style={{
-                backgroundColor: 'rgba(81,4,122,1)',
-                borderRadius: '10px',
-                width: '60px',
+                backgroundColor: "rgba(0,240,120,1)",
+                borderRadius: "10px",
+                width: "60px",
                 boxShadow:
-                  '0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)',
+                  "0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)",
               }}
               onClick={handlePreviousLetter}
             >
@@ -96,15 +107,39 @@ export default function Home() {
             </button>
             <button
               style={{
-                backgroundColor: 'rgba(81,4,122,1)',
-                width: '60px',
-                borderRadius: '10px',
+                backgroundColor: "rgba(0,240,120,1)",
+                width: "60px",
+                borderRadius: "10px",
                 boxShadow:
-                  '0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)',
+                  "0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)",
               }}
               onClick={handleNextLetter}
             >
               Next Letter
+            </button>
+            <button
+              style={{
+                backgroundColor: "rgba(0,240,120,1)",
+                width: "60px",
+                borderRadius: "10px",
+                boxShadow:
+                  "0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)",
+              }}
+              onClick={handleStart}
+            >
+              Go to Start
+            </button>
+            <button
+              style={{
+                backgroundColor: "rgba(0,240,120,1)",
+                width: "60px",
+                borderRadius: "10px",
+                boxShadow:
+                  "0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)",
+              }}
+              onClick={handleEnd}
+            >
+              Go to End
             </button>
           </div>
           {/* Render the CustomAlphabet component with the chosen variations */}

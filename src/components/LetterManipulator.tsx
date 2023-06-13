@@ -1,7 +1,7 @@
 // Import React and required hooks
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // Import the LetterWrapper component
-import LetterWrapper from './LetterWrapper';
+import LetterWrapper from "./LetterWrapper";
 
 // Define the Props type for the LetterManipulator component
 type Props = {
@@ -42,7 +42,7 @@ const LetterManipulator: React.FC<Props> = ({
   ) => {
     // Log the selected variation
     console.log(
-      'selected rotation: ' + rotation + ' flip: ' + flip + ' mirror: ' + mirror
+      "selected rotation: " + rotation + " flip: " + flip + " mirror: " + mirror
     );
     // Set the selected variation index
     setSelectedVariation(index);
@@ -70,20 +70,20 @@ const LetterManipulator: React.FC<Props> = ({
 
   // Define styles for variation cards
   const cardStyle: React.CSSProperties = {
-    display: 'inline-block',
-    margin: '10px',
-    padding: '5px',
-    borderRadius: '5px',
-    boxShadow: '0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)',
-    cursor: 'pointer',
+    display: "inline-block",
+    margin: "10px",
+    padding: "5px",
+    borderRadius: "5px",
+    boxShadow: "0 2px 3px rgba(105,10,230,1), 0 1px 2px rgba(0,0,0,0.24)",
+    cursor: "pointer",
   };
 
   // Define styles for the selected variation card
   const selectedCardStyle: React.CSSProperties = {
     ...cardStyle,
-    borderColor: '#001244',
-    borderWidth: '4px',
-    borderStyle: 'solid',
+    borderColor: "#001244",
+    borderWidth: "4px",
+    borderStyle: "solid",
   };
 
   // Define the available letter variations
@@ -101,7 +101,7 @@ const LetterManipulator: React.FC<Props> = ({
   // Render the LetterManipulator component
   return (
     <div>
-      <div style={{ position: 'relative', display: 'inline-block' }}>
+      <div style={{ position: "relative", display: "inline-block" }}>
         {/* Render the LetterWrapper component with the current rotation, flip, and mirror values */}
         <LetterWrapper
           letter={letter}
@@ -110,13 +110,13 @@ const LetterManipulator: React.FC<Props> = ({
           mirror={mirror}
         />
       </div>
-      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div style={{ position: "relative", zIndex: 1 }}>
         {/* Render Rotate, Flip, and Mirror buttons */}
         <button
           style={{
-            backgroundColor: 'rgba(105,10,230,1)',
-            borderRadius: '10px',
-            padding: '5px',
+            backgroundColor: "rgba(0,240,120,1)",
+            borderRadius: "10px",
+            padding: "5px",
           }}
           onClick={handleRotateClick}
         >
@@ -124,9 +124,9 @@ const LetterManipulator: React.FC<Props> = ({
         </button>
         <button
           style={{
-            backgroundColor: 'rgba(105,10,230,1)',
-            borderRadius: '10px',
-            padding: '5px',
+            backgroundColor: "rgba(0,240,120,1)",
+            borderRadius: "10px",
+            padding: "5px",
           }}
           onClick={handleFlipClick}
         >
@@ -134,9 +134,9 @@ const LetterManipulator: React.FC<Props> = ({
         </button>
         <button
           style={{
-            backgroundColor: 'rgba(105,10,230,1)',
-            borderRadius: '10px',
-            padding: '5px',
+            backgroundColor: "rgba(0,240,120,1)",
+            borderRadius: "10px",
+            padding: "5px",
           }}
           onClick={handleMirrorClick}
         >
@@ -144,7 +144,7 @@ const LetterManipulator: React.FC<Props> = ({
         </button>
       </div>
 
-      <div style={{ width: '600px' }}>
+      <div style={{ width: "600px" }}>
         {/* Render a card for each letter variation */}
         {letterVariations.map((variation, index) => (
           <div
