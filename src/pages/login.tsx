@@ -31,6 +31,11 @@ const LoginPage: React.FC = () => {
     }
   };
 
+  const handleSaveClick = async () => {
+    alert('Open page to create new user here');
+    console.log('new user here');
+  };
+
   return (
     <div>
       <Nav></Nav>
@@ -51,7 +56,7 @@ const LoginPage: React.FC = () => {
         <button type="submit">Login</button>
       </form>
       <h1>New User?</h1>
-      <button type="submit">Create a New Account</button>
+      <button onClick={handleSaveClick}>Create a New Account</button>
     </div>
   );
 };

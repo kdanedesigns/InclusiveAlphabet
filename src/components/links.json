@@ -15,6 +15,10 @@
         {
             "label": "Account",
             "href": "/account"
+        },
+        {
+            "label": "My Fonts",
+            "href": "/myFonts"
         }
     ]
 }
